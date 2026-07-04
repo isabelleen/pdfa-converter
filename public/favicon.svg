@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#0ea5e9"/>
+  <path d="M9 6h9l6 6v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1z" fill="#e2e8f0"/>
+  <path d="M18 6l6 6h-5a1 1 0 0 1-1-1V6z" fill="#94a3b8"/>
+  <text x="16" y="23" font-family="Segoe UI, sans-serif" font-size="7" font-weight="700"
+        text-anchor="middle" fill="#0f172a">PDF/A</text>
+</svg>

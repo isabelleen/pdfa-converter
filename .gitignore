@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.local
+.DS_Store
+*.log
+*-output-pdfa.pdf
+PROJECT_PLAN.md

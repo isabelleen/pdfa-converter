@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="description" content="Convert PDF to PDF/A for free, entirely in your browser. Your files never leave your device." />
+  <title>PDF → PDF/A Converter (in your browser)</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main>
+    <h1>PDF → PDF/A</h1>
+    <p class="tagline">
+      Convert to the archival PDF/A format <strong>entirely in your browser</strong>.
+      Your file never leaves your device.
+    </p>
+
+    <section id="drop-zone" class="drop-zone">
+      <input type="file" id="file-input" accept="application/pdf" hidden />
+      <p>Drop a PDF here, or <button id="browse-btn" type="button">choose a file</button></p>
+    </section>
+
+    <div class="controls">
+      <label for="conformance">PDF/A level:</label>
+      <select id="conformance">
+        <option value="1">PDF/A-1b</option>
+        <option value="2" selected>PDF/A-2b</option>
+        <option value="3">PDF/A-3b</option>
+      </select>
+    </div>
+
+    <p id="status" class="status" role="status" aria-live="polite">
+      Engine not loaded yet — pick a file to begin.
+    </p>
+
+    <div id="progress" class="progress" hidden>
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <section id="result" class="result" hidden>
+      <div class="name-row">
+        <label for="out-name">Save as:</label>
+        <input type="text" id="out-name" spellcheck="false" autocomplete="off" />
+        <span class="ext">.pdf</span>
+      </div>
+
+      <a id="download-link" class="download-link" download>Download PDF/A</a>
+
+      <div class="validation">
+        <h2>Structural check</h2>
+        <ul id="validation-list"></ul>
+        <p class="validation-note">
+          A quick in-browser check of the required PDF/A structures — not a full
+          ISO validation. For certification-grade checks, run the file through
+          <a href="https://verapdf.org/" target="_blank" rel="noopener">veraPDF</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>100% client-side · Powered by Ghostscript-WASM · No uploads, no tracking</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
